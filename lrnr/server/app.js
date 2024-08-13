@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 dotenv.config();
 app.use(cors());
 
-app.use(path.join(__dirname, 'build'));
+app.use(express.static(path.join(__dirname, 'build')));
 
 //anthropic api key connection and setting up the quizcall function
 const anthropic = new Anthropic();
