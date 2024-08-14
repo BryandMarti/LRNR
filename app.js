@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 //middleware directory
-app.use(express.static(path.join(__dirname, 'build')));
+app.use(express.static(path.join(__dirname, './lrnr/dist')));
 
 //anthropic api key connection and setting up the quizcall function
 const anthropic = new Anthropic();
