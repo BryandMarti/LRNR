@@ -10,7 +10,9 @@ const PORT = process.env.PORT || 5000;
 //connection to .env file and setting up the environment variables
 dotenv.config();
 app.use(cors());
-
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+//middleware directory
 app.use(express.static(path.join(__dirname, 'build')));
 
 //anthropic api key connection and setting up the quizcall function
@@ -69,7 +71,7 @@ User's answer: "${userAnswer}"
 Evaluate if the user's answer is correct or close enough to be considered correct. Consider minor typographical errors or slight variations as correct. Respond with a JSON object in the following format:
 {
   "isCorrect": true/false,
-  "explanation": "Explanation of why the answer is correct or incorrect"
+  "explanation": "Explanation of the answer itself"
 }
 Respond ONLY with the JSON and nothing else.`
         }
