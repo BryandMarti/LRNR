@@ -17,7 +17,7 @@ const QuizPage = () => {
 
   const checkAnswer = async (userAnswer, correctAnswer, question) => {
     try {
-      const response = await fetch('http://localhost:5000/api/check-answer', {
+      const response = await fetch('https://lrnr-quiz-backend.vercel.app/api/check-answer', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
