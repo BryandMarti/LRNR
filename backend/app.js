@@ -3,20 +3,14 @@ const express = require('express');
 const cors = require('cors');
 const Anthropic = require('@anthropic-ai/sdk');
 const dotenv = require('dotenv');
-const path = require('path');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
 //connection to .env file and setting up the environment variables
 dotenv.config();
 app.use(cors());
-app.use(cors({
-  origin: 'https://lrnr-quiz-frontend-fjv4uf46m-carlos-projects-4fb13629.vercel.app/'
-}));
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 //middleware directory
-app.use(express.static(path.join(__dirname, 'build')));
 
 //anthropic api key connection and setting up the quizcall function
 const anthropic = new Anthropic();
