@@ -46,7 +46,6 @@ const QuizGenerator = () => {
 
   return (
     <div className="container" style={{display: 'contents'}}>
-      <Header />
       <h3>Quiz Generation Options</h3>
       <div className="row">
         <label style={{color: 'black'}}>Topic</label>

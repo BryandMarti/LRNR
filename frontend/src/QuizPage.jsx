@@ -81,7 +81,6 @@ const QuizPage = () => {
 
   return (
     <div className="container">
-      <Header />
       <h4>{quiz.title}</h4>
       <p>{quiz.description}</p>
       {!quizCompleted ? (
