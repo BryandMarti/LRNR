@@ -17,7 +17,7 @@ const QuizGenerator = () => {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api', {
+      const response = await fetch('https://lrnr-quiz-backend.vercel.app/api', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -46,7 +46,6 @@ const QuizGenerator = () => {
 
   return (
     <div className="container" style={{display: 'contents'}}>
-      <Header />
       <h3>Quiz Generation Options</h3>
       <div className="row">
         <label style={{color: 'black'}}>Topic</label>

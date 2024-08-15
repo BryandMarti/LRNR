@@ -4,10 +4,12 @@ import HomePage from './HomePage.jsx';
 import AccountPage from './AccountPage.jsx';
 import QuizGenerator from './QuizGenerator.jsx';
 import QuizPage from './QuizPage.jsx';
+import Header from './components/Header.jsx';
 
 function App() {
   return (
     <Router>
+      <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/account" element={<AccountPage />} />

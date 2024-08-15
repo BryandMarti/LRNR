@@ -7,7 +7,6 @@ import Footer from './components/Footer';
 const AccountPage = () => {
   return (
     <>
-      <Header />
       <AccountInfo />
       <AccountStats />
       <Footer />
