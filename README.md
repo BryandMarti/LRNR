@@ -1,6 +1,6 @@
 # [__LRNR__](https://lrnr-ahqs.onrender.com/)
 
-![Image](/lrnr/src/assets/readmelogo.png)
+![Image](./frontend/src/assets/readmelogo.png)
 
  __LRNR__ is an AI-powered quiz generation website designed for users of all types. Accessible on mobile devices, tablets, and computers, __LRNR__ creates challenging quizzes tailored to your preferences.
 
