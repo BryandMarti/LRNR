@@ -1,8 +1,9 @@
-import Header from './components/Header';
-import Footer from './components/Footer';
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
+import React, { useState,useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import 'materialize-css/dist/css/materialize.min.css';
+import 'materialize-css/dist/js/materialize.min.js';
+import QuizPageCSS from './quizPage.module.css'
 const QuizGenerator = () => {
   const [topic, setTopic] = useState('');
   const [expertise, setExpertise] = useState('');
@@ -14,6 +15,16 @@ const QuizGenerator = () => {
   const expertiseLevels = ['novice', 'intermediate', 'expert'];
   const questionNumbers = [5, 10, 15];
   const questionStyles = ['master oogway', "1940's gangster", "like I'm an 8 year old", 'normal', 'jedi', 'captain jack sparrow', 'matthew mcconaughey'];
+
+
+    // initialize materialize elements
+    useEffect(() => {
+
+      const M = window.M; 
+      M.FormSelect.init(document.querySelectorAll('select'));
+    }, []);
+  
+
 
   const handleSubmit = async () => {
     try {
@@ -44,55 +55,64 @@ const QuizGenerator = () => {
   
   
 
+ 
   return (
     <div className="container" style={{display: 'contents'}}>
-      <h3>Quiz Generation Options</h3>
-      <div className="row">
+   
+  <div className={QuizPageCSS.contentContainer}>
+  <h3>Quiz Generation Options</h3>
+  <div className="row">
         <label style={{color: 'black'}}>Topic</label>
         <div className="input-field col s12">
-          <select value={topic} onChange={(e) => setTopic(e.target.value)} className="browser-default" style={{color: 'black'}}>
-            <option value="" disabled>Select a topic</option>
+          <select value={topic} onChange={(e) => setTopic(e.target.value)} style={{color: 'black'}}>
+            <option value="" disabled></option>
             {topics.map((topic) => (
               <option key={topic} value={topic}>{topic}</option>
             ))}
           </select>
+          <label></label>
         </div>
       </div>
       <div className="row">
         <label style={{color: 'black'}}>Expertise</label>
         <div className="input-field col s12">
-          <select value={expertise} onChange={(e) => setExpertise(e.target.value)} className="browser-default" style={{color: 'black'}}>
-            <option value="" disabled>Select expertise</option>
+          <select value={expertise} onChange={(e) => setExpertise(e.target.value)} style={{color: 'black'}}>
+            <option value="" disabled></option>
             {expertiseLevels.map((level) => (
               <option key={level} value={level}>{level}</option>
             ))}
           </select>
+          <label></label>
         </div>
       </div>
       <div className="row">
         <label style={{color: 'black'}}>Number of Questions</label>
         <div className="input-field col s12">
-          <select value={questionCount} onChange={(e) => setQuestionCount(Number(e.target.value))} className="browser-default" style={{color: 'black'}}>
+          <select value={questionCount} onChange={(e) => setQuestionCount(Number(e.target.value))} style={{color: 'black'}}>
             {questionNumbers.map((num) => (
               <option key={num} value={num}>{num}</option>
             ))}
           </select>
+          <label></label>
         </div>
       </div>
       <div className="row">
         <label style={{color: 'black'}}>Style of Questions</label>
         <div className="input-field col s12">
-          <select value={styleOfQuestions} onChange={(e) => setStyleOfQuestions(e.target.value)} className="browser-default" style={{color: 'black'}}>
+          <select value={styleOfQuestions} onChange={(e) => setStyleOfQuestions(e.target.value)} style={{color: 'black'}}>
             {questionStyles.map((style) => (
               <option key={style} value={style}>{style}</option>
             ))}
           </select>
+          <label></label>
         </div>
       </div>
-      <button className="btn green" onClick={handleSubmit}>Generate Quiz</button>
-      <Footer />
+   
+  <button className="waves-effect waves-light btn" onClick={handleSubmit}>Submit</button>
+  </div>
+   
+      
     </div>
   );
-};
-
+  };
 export default QuizGenerator;

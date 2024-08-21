@@ -5,7 +5,7 @@ import AccountPage from './AccountPage.jsx';
 import QuizGenerator from './QuizGenerator.jsx';
 import QuizPage from './QuizPage.jsx';
 import Header from './components/Header.jsx';
-
+import Footer  from './components/Footer.jsx'
 function App() {
   return (
     <Router>
@@ -16,6 +16,7 @@ function App() {
         <Route path="/quiz-generator" element={<QuizGenerator />} />
         <Route path="/quiz-page" element={<QuizPage />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }
