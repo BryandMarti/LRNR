@@ -1,0 +1,21 @@
+
+.contentContainer{
+    margin:3rem;
+  }
+  
+  .quizContainer{
+    margin:2rem;
+  }
+  
+  .questionNumberContainer{
+    width: 100%;
+    text-align: center;
+  }
+
+
+  .resultContainer{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }

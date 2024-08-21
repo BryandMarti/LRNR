@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import Header from './components/Header'; 
-import Footer from './components/Footer';
 import { useLocation } from 'react-router-dom';
-
+import QuizPageCSS from './quizPage.module.css'
 const QuizPage = () => {
   const location = useLocation();
   const { quiz } = location.state;
@@ -80,14 +78,17 @@ const QuizPage = () => {
   const currentQuestion = quiz.questions[currentQuestionIndex];
 
   return (
-    <div className="container">
-      <h4>{quiz.title}</h4>
-      <p>{quiz.description}</p>
+    <div className={QuizPageCSS.quizContainer}>
+       <div className={QuizPageCSS.questionNumberContainer}> <h2   style={{color: '#009688'}}>{` ${currentQuestionIndex + 1} of ${quiz.questions.length}`}</h2></div>
+      <h4 style={{color: '#009688'}}>Question</h4>
+      {/* <p>{quiz.description}</p> */}
       {!quizCompleted ? (
         <>
           <div className="question-section">
-            <h5>{`Question ${currentQuestionIndex + 1} of ${quiz.questions.length}`}</h5>
+         
             <p>{currentQuestion.question}</p>
+            <h3 style={{color: '#009688', fontSize: '30px'}}>Your Answer</h3>
+            <p style={{color: '#009688'}}>Answer</p>
             <input
               style={{color: 'black'}}
               type="text"
@@ -98,29 +99,31 @@ const QuizPage = () => {
             />
           </div>
           <button 
-            className="btn green" 
+           className="waves-effect waves-light btn"
             onClick={handleAnswerSubmit} 
             disabled={showNextButton || isChecking || userAnswer.trim() === ''}
           >
             {isChecking ? 'Checking...' : 'Submit Answer'}
           </button>
+
+      
           <p>{feedback}</p>
           {showNextButton && (
-            <button className="btn blue" onClick={handleNextQuestion}>
-              Next Question
+            <button  className="waves-effect waves-light btn" onClick={handleNextQuestion}>
+              Next 
             </button>
           )}
         </>
       ) : (
-        <div>
-          <h5>Quiz Completed!</h5>
-          <p>Your Score: {score} / {quiz.questions.length}</p>
-          <button className="btn blue" onClick={handleRetry}>
-            Retry Quiz
+        <div className={QuizPageCSS.resultContainer}>
+          <h5 style={{color: '#009688', fontSize: '55px'}}>lrnr</h5>
+          <p>Questions Right: {score} / {quiz.questions.length}</p>
+          <button className="waves-effect waves-light btn" onClick={handleRetry}>
+            Try Another Quiz
           </button>
         </div>
       )}
-      <Footer />
+      
     </div>
   );
 };
