@@ -42,20 +42,19 @@ const QuizPage = () => {
       setErrorMessage('Please enter an answer.');
       return;
     }
-
-    // Disable the check answer button and show the next button while checking the answer
-    setShowNextButton(false);
+  
+    // Disable both the check answer button and the next button while checking the answer
     setIsChecking(true);
-    setShowNextButton(true);
+    setShowNextButton(false);
     setErrorMessage('');
-
+  
     const currentQuestion = quiz.questions[currentQuestionIndex];
     const correctAnswer = currentQuestion.correctAnswer;
-
-    // Check the answer if its true, or if its false, show the correct answer
+  
+    // Check the answer if it's true, or if it's false, show the correct answer
     const result = await checkAnswer(userAnswer, correctAnswer, currentQuestion.question);
     setIsChecking(false);
-
+  
     // If there was no error checking the answer, show the correct/incorrect message
     if (result) {
       if (result.isCorrect) {
@@ -68,21 +67,26 @@ const QuizPage = () => {
       // If there was an error checking the answer, show an error message
       setFeedback('Error checking answer. Please try again.');
     }
+  
+    // Show the next button after the answer has been checked
+    setShowNextButton(true);
   };
-
-  // this function is used to handle the next question button, it checks if there are more questions and if so, it moves to the next question, if not, it shows the final score
+  
   const handleNextQuestion = () => {
     if (currentQuestionIndex < quiz.questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setUserAnswer('');
       setFeedback('');
-      setShowNextButton(false);
+      setShowNextButton(false); // Hide the next button until the user submits the next answer
     } else {
       setFeedback(`Quiz Completed! Your final score is ${score} / ${quiz.questions.length}`);
       setQuizCompleted(true); 
     }
   };
+  
 
+
+  // unused handleretry, this would count the number of correct answer against the number of answers and give the total to the user.
   const handleRetry = () => {
     setCurrentQuestionIndex(0);
     setUserAnswer('');
@@ -151,8 +155,8 @@ const QuizPage = () => {
       ) : (
         <div className={QuizPageCSS.resultContainer} style={{margin: '6rem 0 18rem 0'}}>
           <h5 style={{ color: '#009688', fontSize: '55px' }}>lrnr</h5>
-          <p>Questions Right: {score} / {quiz.questions.length}</p>
-          <button className="waves-effect waves-light btn" onClick={handleRetry} style={{ backgroundColor: '#4CAF50' }}>
+          <p>Questions Right: 0111</p>
+          <button className="waves-effect waves-light btn" style={{ backgroundColor: '#4CAF50' }}>
             Try Another Quiz
           </button>
         </div>
