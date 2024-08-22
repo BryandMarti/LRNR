@@ -12,9 +12,9 @@ const Footer = () => {
           <div className="col l4 offset-l2 s12">
             <h5 className="white-text">Links</h5>
             <ul>
-              <li><a className="grey-text text-lighten-3" href="/">Home</a></li>
-              <li><a className="grey-text text-lighten-3" href="/quiz-generator">Quiz Generator</a></li>
-              <li><a className="grey-text text-lighten-3" href="/account">Account</a></li>
+              <li><NavLink className="grey-text text-lighten-3" to="/">Home</NavLink></li>
+              <li><NavLink className="grey-text text-lighten-3" to="/quiz-generator">Quiz Generator</NavLink></li>
+              <li><NavLink className="grey-text text-lighten-3" to="/account">Account</NavLink></li>
             </ul>
           </div>
         </div>
