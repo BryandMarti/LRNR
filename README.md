@@ -33,17 +33,16 @@ git clone "SSHlink"
 2. Navigate into the Directory
 
 ``` sh
-cd lrnr
+cd frontend
 ```
 
 3. Install all dependencies
 
 ```sh
 npm install
-npm i cors express @anthropic-ai/sdk
 ```
 
-4. tart the server:
+4. start the server:
 
 ```sh
 npm run start
@@ -55,7 +54,6 @@ npm run start
 http://localhost:{PORT}
 ``` 
 
-in your preferred browser.
 
 
 __Usage__
