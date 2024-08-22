@@ -83,7 +83,7 @@ const QuizGenerator = () => {
             <select value={topic} onChange={(e) => setTopic(e.target.value)} style={{color: 'black'}}>
               <option value="" disabled></option>
               {topics.map((topic) => (
-                <option key={topic} value={topic}>{topic}</option>
+                <option key={topic} value={topic} style={{color: 'black'}}>{topic}</option>
               ))}
             </select>
           </div>

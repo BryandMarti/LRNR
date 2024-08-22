@@ -149,7 +149,7 @@ const QuizPage = () => {
           </div>
         </>
       ) : (
-        <div className={QuizPageCSS.resultContainer}>
+        <div className={QuizPageCSS.resultContainer} style={{margin: '6rem 0 18rem 0'}}>
           <h5 style={{ color: '#009688', fontSize: '55px' }}>lrnr</h5>
           <p>Questions Right: {score} / {quiz.questions.length}</p>
           <button className="waves-effect waves-light btn" onClick={handleRetry} style={{ backgroundColor: '#4CAF50' }}>
