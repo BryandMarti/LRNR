@@ -3,6 +3,10 @@
     margin:3rem;
   }
   
+  .select-wrapper input.select-dropdown {
+    color: black !important;
+  }
+
   .quizContainer{
     margin:2rem;
   }
@@ -19,3 +23,43 @@
     justify-content: center;
     text-align: center;
   }
+
+  .quizContainer {
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .questionNumberContainer {
+    margin-bottom: 20px;
+  }
+  
+  .questionSection {
+    margin-bottom: 20px;
+  }
+  
+  .evaluationSection {
+    margin-top: 20px;
+  }
+  
+  .resultContainer {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+  }
+  
