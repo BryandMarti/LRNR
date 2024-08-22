@@ -21,6 +21,43 @@ a:hover {
   color: #535bf2;
 }
 
+.sidenav-trigger {
+  display: none;
+  cursor: pointer;
+  font-size: 2em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 16px;
+}
+
+ul.sidenav {
+  display: none;
+  position: absolute;
+  top: 64px;
+  right: 0;
+  width: 200px;
+  height: 300px;
+  background-color: #ffffff;
+  list-style-type: none;
+  padding: 0;
+  margin-left:725px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000; 
+}
+
+
+
+.sidenav li {
+  padding: 16px;
+  text-align: right;
+}
+
+.show-menu {
+  display: block;
+}
+
+
 body {
   background-color: #ffffff;
   margin: 0;
@@ -53,6 +90,22 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+@media (max-width: 992px) {
+  .hide-on-med-and-down {
+    display: none;
+  }
+
+  .sidenav-trigger {
+    display: block;
+    color: #ffffff;
+  }
+
+  ul.sidenav {
+    display: block;
+    right: 0 !important;
+  }
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -64,4 +117,11 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+
+
 }
