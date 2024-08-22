@@ -106,14 +106,14 @@ const QuizPage = () => {
         </div>
       )}
       
-      {!quizCompleted && <h4 style={{ color: '#009688' }}>Question</h4>}
+      {!quizCompleted && <h4 style={{ fontFamily: 'sans-serif', fontSize: '54px', color: '#009688' }}>Question</h4>}
       
       {!quizCompleted ? (
         <>
           <div className={QuizPageCSS.questionSection}>
-            <p>{currentQuestion.question}</p>
+            <p style={{marginBottom: '5rem'}}>{currentQuestion.question}</p>
             
-            <h3 style={{ color: '#009688', fontSize: '24px', marginBottom: '10px' }}>Your Answer</h3>
+            <h3 style={{ fontFamily: 'sans-serif', color: '#009688', fontSize: '44px', marginBottom: '10px' }}>Your Answer</h3>
             
             <label style={{ color: '#009688', fontSize: '16px' }}>Answer</label>
             <input
@@ -138,7 +138,7 @@ const QuizPage = () => {
             
             <div className={QuizPageCSS.evaluationSection}>
               <div style={{ display: 'flex', marginBottom: '10px' }}>
-                <h4 style={{ color: '#009688' }}>Verner's Evaluation</h4>
+                <h4 style={{fontFamily: 'sans-serif', color: '#009688' }}>Verner's Evaluation</h4>
               </div>
               <div style={{ display: 'flex', position:'relative', justifyContent: 'right' }}>
                 <p style={{maxWidth: '50%', position: 'static', right: '0'}}>{feedback}</p>
@@ -154,8 +154,8 @@ const QuizPage = () => {
         </>
       ) : (
         <div className={QuizPageCSS.resultContainer} style={{margin: '6rem 0 18rem 0'}}>
-          <h5 style={{ color: '#009688', fontSize: '55px' }}>lrnr</h5>
-          <p>Questions Right: 0111</p>
+          <h5 style={{fontFamily: 'Roboto, sans-serif', color: '#009688', fontSize: '65px' }}>lrnr</h5>
+          <p style={{fontWeight: 'bold', padding: '2rem'}}>Questions Right: 0111</p>
           <button className="waves-effect waves-light btn" style={{ backgroundColor: '#4CAF50' }}>
             Try Another Quiz
           </button>
