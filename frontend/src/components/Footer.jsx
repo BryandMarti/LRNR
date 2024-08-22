@@ -2,7 +2,7 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="page-footer blue absolute">
+    <footer className="page-footer blue absolute" style={{marginTop: '8rem'}}>
       <div className="container" style={{width: '80%'}}>
         <div className="row">
           <div className="col l6 s12">
