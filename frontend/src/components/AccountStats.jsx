@@ -7,7 +7,7 @@ const AccountStats = () => {
         <div className="col s12 m4">
           <div className="icon-block center">
             <h2 style={{ color: '#1ee9b6', fontSize: '48px' }}>
-              <i className="material-icons">whatshot</i>
+              <i style={{ fontSize: '48px'}} className="material-icons">whatshot</i>
             </h2>
             <h5 style={{ color: 'black', fontSize: '24px' }}>Streak</h5>
             <p className="left" style={{ color: 'black', textAlign: 'center', fontSize: '16px', lineHeight: '1.5' }}>
@@ -18,7 +18,7 @@ const AccountStats = () => {
         <div className="col s12 m4">
           <div className="icon-block center">
             <h2 style={{ color: '#1ee9b6', fontSize: '48px' }}>
-              <i className="material-icons">view_list</i>
+              <i style={{ fontSize: '48px'}} className="material-icons">view_list</i>
             </h2>
             <h5 style={{ color: 'black', fontSize: '24px' }}>Platinum Quizzes</h5>
             <p className="left" style={{ color: 'black', textAlign: 'center', fontSize: '16px', lineHeight: '1.5' }}>
@@ -33,7 +33,7 @@ const AccountStats = () => {
         <div className="col s12 m4">
           <div className="icon-block center">
             <h2 style={{ color: '#1ee9b6', fontSize: '48px' }}>
-              <i className="material-icons">person</i>
+              <i style={{ fontSize: '48px'}} className="material-icons">person</i>
             </h2>
             <h5 style={{ color: 'black', fontSize: '24px' }}>Lrnr Level: 2</h5>
             <p style={{ color: 'black', textAlign: 'center', fontSize: '16px', lineHeight: '1.5' }}>

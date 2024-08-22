@@ -77,6 +77,7 @@ const QuizGenerator = () => {
     <div className="container" style={{display: 'contents'}}>
       <div className={QuizPageCSS.contentContainer}>
         <h3>Quiz Generation Options</h3>
+        <p>Please choose your preferences below to generate your personalized quiz</p>
         <div className="row">
           <label style={{color: 'black'}}>Topic</label>
           <div className="input-field col s12">
