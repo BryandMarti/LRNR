@@ -1,4 +1,4 @@
-# [__LRNR__](https://lrnr-ahqs.onrender.com/)
+# [__LRNR__](https://lrnr-sigma.vercel.app/)
 
 ![Image](./frontend/src/assets/readmelogo.png)
 
